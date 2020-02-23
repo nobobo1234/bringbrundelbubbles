@@ -1,8 +1,11 @@
 extends Actor
 
+onready var animated_sprite: = $AnimatedSprite
+
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("up") and _velocity.y < 0.0
 	var direction: = get_direction()
+	change_sprites(direction)
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
@@ -26,3 +29,14 @@ func calculate_move_velocity(
 	if is_jump_interrupted:
 		out.y = 0.0
 	return out
+
+func change_sprites(direction: Vector2) -> void:
+	if direction.x == 1.0:
+		animated_sprite.set_flip_h(false)
+	elif direction.x == -1.0:
+		animated_sprite.set_flip_h(true)
+	
+	if direction.x == 0.0:
+		animated_sprite.play("idling")
+	else:
+		animated_sprite.play("walking")
