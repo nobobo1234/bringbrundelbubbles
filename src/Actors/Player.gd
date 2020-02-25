@@ -1,11 +1,19 @@
 extends Actor
 
 onready var animated_sprite: = $AnimatedSprite
+const MENTOS = preload("res://src/Objects/Mentos.tscn")
+var flip = 1.0 
+const IS_PLAYER = true # For preventing mentos of breaking inside player
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("up") and _velocity.y < 0.0
 	var direction: = get_direction()
 	change_sprites(direction)
+	
+	if Input.is_action_just_pressed("shoot"):
+		shoot_fireball(direction)
+	
+	# change_sprites(direction)
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
@@ -33,10 +41,21 @@ func calculate_move_velocity(
 func change_sprites(direction: Vector2) -> void:
 	if direction.x == 1.0:
 		animated_sprite.set_flip_h(false)
+		flip = 1.0
 	elif direction.x == -1.0:
 		animated_sprite.set_flip_h(true)
+		flip = -1.0
 	
 	if direction.x == 0.0:
 		animated_sprite.play("idling")
 	else:
 		animated_sprite.play("walking")
+		
+func shoot_fireball(direction: Vector2) -> void:
+	var mentos = MENTOS.instance()
+	get_parent().add_child(mentos)
+	if direction.x != 0:
+		mentos.direction = direction
+	else:
+		mentos.direction = Vector2(flip, 0)
+	mentos.position = $Position2D.global_position
