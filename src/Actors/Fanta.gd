@@ -13,5 +13,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_Bullet_detector_area_entered(area: Area2D) -> void:
-	if area.get_name() == "Mentos":
-		set_physics_process(false)
+	if area.is_in_group("mentos"):
+		queue_free()

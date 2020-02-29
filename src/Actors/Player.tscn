@@ -53,19 +53,19 @@ region = Rect2( 0, 128, 32, 32 )
 atlas = ExtResource( 1 )
 region = Rect2( 0, 160, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=13]
+[sub_resource type="SpriteFrames" id=16]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
@@ -77,32 +77,31 @@ animations = [ {
 "name": "idling",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
 "name": "shooting",
 "speed": 8.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 8.67413, 27.6355 )
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 9.10249, 27.8388 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
 script = ExtResource( 2 )
-speed = Vector2( 300, 1000 )
 gravity = 4000.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -32.1049 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 13 )
+frames = SubResource( 16 )
 animation = "idling"
-frame = 23
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2.05112, -27.74 )
-shape = SubResource( 14 )
+shape = SubResource( 17 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -114,3 +113,11 @@ smoothing_speed = 7.0
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( -3.8147e-06, -33.1336 )
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+position = Vector2( 2.05112, -27.74 )
+shape = SubResource( 17 )
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

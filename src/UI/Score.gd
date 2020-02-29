@@ -10,3 +10,8 @@ func _ready() -> void:
 
 func update_interface() -> void:
 	$Label.text = "Flesjes: %s/%s" % [ScoreData.bottles, total_bottles]
+
+func _on_Score_tree_entered() -> void:
+	total_bottles = get_tree().get_nodes_in_group("flessen").size()
+	ScoreData.total_bottles = get_tree().get_nodes_in_group("flessen").size()
+	ScoreData.bottles = 0

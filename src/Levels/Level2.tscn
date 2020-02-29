@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,6 @@
 [ext_resource path="res://src/UI/Score.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Objects/NextLevel.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=8]
 
 [node name="Level 1" type="Node2D"]
 
@@ -50,8 +48,3 @@ position = Vector2( 372.785, 550.101 )
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1040, 577 )
-
-[node name="NextLevel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1128, 517 )
-scale = Vector2( 1.5, 3 )
-next_scene = ExtResource( 8 )

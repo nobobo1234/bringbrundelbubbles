@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/fanta.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Fanta.gd" type="Script" id=2]
@@ -31,7 +31,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Fanta" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.5095, 15.4928 )
+
+[node name="Fanta" type="KinematicBody2D" groups=[
+"fanta",
+]]
 scale = Vector2( 1.5, 1.5 )
 collision_layer = 2
 collision_mask = 8
@@ -42,6 +47,7 @@ speed = Vector2( 200, 0 )
 position = Vector2( 0, -16 )
 frames = SubResource( 6 )
 animation = "idling"
+frame = 3
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -58,9 +64,7 @@ physics_process_parent = true
 
 [node name="Bullet detector" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bullet detector"]
-visible = false
-position = Vector2( -0.5, -15.5 )
-scale = Vector2( 0.55, 1.55 )
-polygon = PoolVector2Array( 2.72727, -10, 2.72727, -9.35484, 2.72727, -8.70968, 4.54545, -8.70968, 4.54545, -8.06452, 6.36364, -8.06452, 6.36364, -7.41935, 8.18182, -7.41935, 8.18182, -6.77419, 10, -6.77419, 10, 3.54839, 8.18182, 3.54839, 8.18182, 4.83871, 6.36364, 4.83871, 6.36364, 6.77419, 8.18182, 6.77419, 8.18182, 8.06452, 10, 8.06452, 10, 9.35484, 8.18182, 9.35484, 8.18182, 10, -8.18182, 10, -8.18182, 9.35484, -10, 9.35484, -10, 8.06452, -8.18182, 8.06452, -8.18182, 6.77419, -6.36364, 6.77419, -6.36364, 4.83871, -8.18182, 4.83871, -8.18182, 3.54839, -10, 3.54839, -10, -6.77419, -8.18182, -6.77419, -8.18182, -7.41935, -6.36364, -7.41935, -6.36364, -8.06452, -4.54545, -8.06452, -4.54545, -8.70968, -2.72727, -8.70968, -2.72727, -10 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet detector"]
+position = Vector2( -0.512024, -15.5653 )
+shape = SubResource( 7 )
 [connection signal="area_entered" from="Bullet detector" to="." method="_on_Bullet_detector_area_entered"]

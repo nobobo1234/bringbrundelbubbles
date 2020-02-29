@@ -53,9 +53,16 @@ func change_sprites(direction: Vector2) -> void:
 		
 func shoot_fireball(direction: Vector2) -> void:
 	var mentos = MENTOS.instance()
+	mentos.add_to_group("mentos")
 	get_parent().add_child(mentos)
 	if direction.x != 0:
 		mentos.direction = direction
 	else:
 		mentos.direction = Vector2(flip, 0)
 	mentos.position = $Position2D.global_position
+
+
+func _on_EnemyDetector_body_entered(body: KinematicBody2D) -> void:
+	if body.is_in_group("fanta"):
+		queue_free()
+
