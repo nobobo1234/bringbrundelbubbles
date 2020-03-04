@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="BBB: Bring Brundel Bubbles"
+run/main_scene="res://src/Screens/Main Screen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

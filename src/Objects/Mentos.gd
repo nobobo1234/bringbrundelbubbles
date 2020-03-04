@@ -19,3 +19,4 @@ func _on_body_entered(body: Node) -> void:
 	animated_sprite.play("break")
 	yield(animated_sprite, "animation_finished")
 	queue_free()
+

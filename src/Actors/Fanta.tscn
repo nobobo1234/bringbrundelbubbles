@@ -32,7 +32,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 5.5095, 15.4928 )
+extents = Vector2( 5.17869, 15.4928 )
 
 [node name="Fanta" type="KinematicBody2D" groups=[
 "fanta",
@@ -47,7 +47,7 @@ speed = Vector2( 200, 0 )
 position = Vector2( 0, -16 )
 frames = SubResource( 6 )
 animation = "idling"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -63,8 +63,10 @@ process_parent = true
 physics_process_parent = true
 
 [node name="Bullet detector" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet detector"]
+modulate = Color( 0.980392, 0.00784314, 0.00784314, 1 )
 position = Vector2( -0.512024, -15.5653 )
 shape = SubResource( 7 )
 [connection signal="area_entered" from="Bullet detector" to="." method="_on_Bullet_detector_area_entered"]

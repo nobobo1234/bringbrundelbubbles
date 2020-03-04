@@ -18,4 +18,14 @@ margin_top = 16.0
 margin_right = -24.0
 margin_bottom = 30.0
 text = "Flesjes: %s/%s"
+
+[node name="Level" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 120.0
+margin_bottom = 30.0
+text = "Level: %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="tree_entered" from="." to="." method="_on_Score_tree_entered"]

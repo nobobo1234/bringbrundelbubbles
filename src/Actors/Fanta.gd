@@ -1,5 +1,7 @@
 extends Actor
 
+var dying = false
+
 func _ready() -> void:
 	set_physics_process(false)
 	_velocity.x = -speed.x
@@ -14,4 +16,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_Bullet_detector_area_entered(area: Area2D) -> void:
 	if area.is_in_group("mentos"):
+		dying = true
+		set_physics_process(false)
+		yield(area.get_node("AnimatedSprite"), "animation_finished")
 		queue_free()

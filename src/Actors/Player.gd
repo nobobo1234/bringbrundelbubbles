@@ -63,6 +63,6 @@ func shoot_fireball(direction: Vector2) -> void:
 
 
 func _on_EnemyDetector_body_entered(body: KinematicBody2D) -> void:
-	if body.is_in_group("fanta"):
+	if body.is_in_group("fanta") && !body.get("dying"):
 		queue_free()
 

@@ -7,15 +7,15 @@
 [ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=6]
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 2" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Score" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = -2.0
-margin_top = -1.34738
+margin_top = -1.0
 margin_right = -2.0
-margin_bottom = -1.34741
+margin_bottom = -1.00006
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
