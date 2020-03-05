@@ -42,12 +42,13 @@ collision_layer = 2
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 200, 0 )
+gravity = 5000.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -16 )
 frames = SubResource( 6 )
 animation = "idling"
-frame = 1
+frame = 4
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

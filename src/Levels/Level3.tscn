@@ -1,19 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Objects/Spa Rood.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/UI/Score.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Objects/NextLevel.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UI/Score.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Objects/Spa Rood.tscn" type="PackedScene" id=8]
 
 [node name="Level 1" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Score" parent="CanvasLayer" instance=ExtResource( 4 )]
+[node name="Score" parent="CanvasLayer" instance=ExtResource( 6 )]
 margin_left = -2.0
 margin_top = -1.34738
 margin_right = -2.0
@@ -27,49 +25,44 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 0, 1, 0, 1, 536870913, 0, 2, 536870913, 0, 3, 536870913, 0, 4, 536870913, 0, 5, 536870913, 0, 6, 536870913, 0, 7, 536870913, 0, 8, 536870913, 0, 9, 536870913, 0, 10, 536870913, 0, 11, 536870913, 0, 12, 536870913, 0, 13, 536870913, 0, 14, 536870913, 0, 15, 536870913, 0, 16, 536870913, 0, 17, 536870913, 0, 18, 536870913, 0, 19, 536870913, 0, 20, 536870913, 0, 21, 536870913, 0, 22, 536870913, 0, 23, 536870913, 0, 24, 536870913, 0, 25, 536870913, 0, 26, 536870913, 0, 27, 536870913, 0, 28, 536870913, 0, 29, 536870913, 0, 30, 536870913, 0, 31, 536870913, 0, 32, 536870913, 0, 33, 536870913, 0, 34, 536870913, 0, 35, 536870913, 0, 36, 536870913, 0, 37, 536870913, 0, 38, 536870913, 0, 39, 536870913, 0, 40, 536870913, 0, 41, 536870913, 0, 42, 536870913, 0, 43, 536870913, 0, 44, 536870913, 0, 45, 536870913, 0, 46, 536870913, 0, 47, 536870913, 0, 48, 536870913, 0, 49, 536870913, 0, 50, 536870913, 0, 51, 536870913, 0, 52, 536870913, 0, 53, 536870913, 0, 54, 536870913, 0, 55, 536870913, 0, 56, 536870913, 0, 57, 536870913, 0, 58, 536870913, 0, 59, 536870913, 0, 60, 536870913, 0, 61, 536870913, 0, 62, 536870913, 0, 63, 536870913, 0, 64, 1, 0, 65536, 1, 0, 65600, 1, 0, 131072, 1, 0, 131136, 1, 0, 196608, 1, 0, 196672, 1, 0, 262144, 1, 0, 262208, 1, 0, 327680, 1, 0, 327744, 1, 0, 393216, 1, 0, 393280, 1, 0, 458752, 1, 0, 458816, 1, 0, 524288, 1, 0, 524352, 1, 0, 589824, 1, 0, 589888, 1, 0, 655360, 1, 0, 655424, 1, 0, 720896, 1, 0, 720960, 1, 0, 786432, 1, 0, 786496, 1, 0, 851968, 1, 0, 852032, 1, 0, 917504, 1, 0, 917568, 1, 0, 983040, 1, 0, 983104, 1, 0, 1048576, 1, 0, 1048640, 1, 0, 1114112, 1, 0, 1114176, 1, 0, 1179648, 1, 0, 1179712, 1, 0, 1245184, 1, 0, 1245248, 1, 0, 1310720, 1, 0, 1310784, 1, 0, 1376256, 1, 0, 1376320, 1, 0, 1441792, 1, 0, 1441856, 1, 0, 1507328, 1, 0, 1507392, 1, 0, 1572864, 1, 0, 1572928, 1, 0, 1638400, 1, 0, 1638464, 1, 0, 1703936, 1, 0, 1704000, 1, 0, 1769472, 1, 0, 1769536, 1, 0, 1835008, 1, 0, 1835072, 1, 0, 1900544, 1, 0, 1900608, 1, 0, 1900609, 1, 0, 1900610, 1, 0, 1900611, 1, 0, 1900612, 1, 0, 1900613, 1, 0, 1900614, 1, 0, 1900615, 1, 0, 1966080, 1, 0, 1966124, 1, 0, 1966125, 1, 0, 1966126, 1, 0, 1966127, 1, 0, 1966130, 6, 0, 1966151, 1, 0, 2031616, 1, 0, 2031687, 1, 0, 2097152, 1, 0, 2097168, 536870918, 0, 2097170, 536870918, 0, 2097202, 6, 0, 2097223, 1, 0, 2162688, 1, 0, 2162759, 1, 0, 2228224, 1, 0, 2228230, 4, 0, 2228231, 536870914, 0, 2228232, 536870915, 0, 2228240, 536870918, 0, 2228242, 536870918, 0, 2228259, 3, 0, 2228260, 2, 0, 2228261, 536870917, 0, 2228264, 5, 0, 2228265, 2, 0, 2228266, 536870916, 0, 2228274, 6, 0, 2228291, 7, 0, 2228295, 1, 0, 2293760, 1, 0, 2293831, 1, 0, 2359296, 1, 0, 2359297, 0, 0, 2359298, 0, 0, 2359299, 0, 0, 2359300, 0, 0, 2359301, 0, 0, 2359302, 0, 0, 2359303, 0, 0, 2359304, 0, 0, 2359305, 0, 0, 2359306, 0, 0, 2359307, 0, 0, 2359308, 0, 0, 2359309, 0, 0, 2359310, 0, 0, 2359311, 0, 0, 2359312, 0, 0, 2359313, 0, 0, 2359314, 0, 0, 2359315, 0, 0, 2359316, 0, 0, 2359317, 0, 0, 2359318, 0, 0, 2359319, 0, 0, 2359320, 0, 0, 2359321, 0, 0, 2359322, 0, 0, 2359323, 0, 0, 2359324, 0, 0, 2359325, 0, 0, 2359326, 0, 0, 2359327, 0, 0, 2359328, 0, 0, 2359329, 0, 0, 2359330, 0, 0, 2359331, 0, 0, 2359332, 0, 0, 2359333, 0, 0, 2359334, 0, 0, 2359335, 0, 0, 2359336, 0, 0, 2359337, 0, 0, 2359338, 0, 0, 2359339, 0, 0, 2359340, 0, 0, 2359341, 0, 0, 2359342, 0, 0, 2359343, 0, 0, 2359344, 0, 0, 2359345, 0, 0, 2359346, 0, 0, 2359347, 0, 0, 2359348, 0, 0, 2359349, 0, 0, 2359350, 0, 0, 2359351, 0, 0, 2359352, 0, 0, 2359353, 0, 0, 2359354, 0, 0, 2359355, 0, 0, 2359356, 0, 0, 2359357, 0, 0, 2359358, 0, 0, 2359359, 0, 0, 2359360, 0, 0, 2359361, 0, 0, 2359362, 0, 0, 2359363, 0, 0, 2359364, 0, 0, 2359365, 0, 0, 2359366, 0, 0, 2359367, 1, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 54.888, 562.238 )
 collision_mask = 24
 
-[node name="Fanta" parent="." instance=ExtResource( 5 )]
+[node name="Fanta" parent="." instance=ExtResource( 4 )]
 position = Vector2( 343.512, 571.384 )
 
 [node name="Flessen" type="Node" parent="."]
 
-[node name="Spa Rood" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 152.809, 514.485 )
 
-[node name="Spa Rood2" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood2" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 192.614, 457.222 )
 
-[node name="Spa Rood4" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood4" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 254.766, 473.283 )
 
-[node name="Spa Rood3" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood3" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 373, 550 )
 
-[node name="Spa Rood5" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood5" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 675, 518 )
 
-[node name="Spa Rood6" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood6" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 688, 467 )
 
-[node name="Spa Rood7" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood7" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 783, 464 )
 
-[node name="Spa Rood8" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood8" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 865, 479 )
 
-[node name="Spa Rood9" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood9" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 893, 515 )
 
-[node name="Spa Rood10" parent="Flessen" instance=ExtResource( 3 )]
+[node name="Spa Rood10" parent="Flessen" instance=ExtResource( 8 )]
 position = Vector2( 913, 557 )
 
-[node name="Door" parent="." instance=ExtResource( 6 )]
+[node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1040, 577 )
-
-[node name="NextLevel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1128, 517 )
-scale = Vector2( 1.5, 3 )
-next_scene = ExtResource( 8 )
