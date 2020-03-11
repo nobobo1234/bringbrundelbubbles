@@ -1,26 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/title.png" type="Texture" id=2]
 [ext_resource path="res://src/UI/ChangeSceneButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/RetryButton.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Theme" id=1]
+[sub_resource type="Theme" id=3]
 default_font = ExtResource( 1 )
 
 [sub_resource type="Theme" id=2]
 default_font = ExtResource( 1 )
 
-[node name="Control" type="Control"]
+[node name="DiedScreen" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 1 )
+theme = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -41,29 +38,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChangeSceneButton2" parent="." instance=ExtResource( 3 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -119.0
-margin_top = 179.0
-margin_right = 119.0
-margin_bottom = 235.0
-text = "Hoofdmenu"
-next_scene_path = "res://src/Screens/Main Screen.tscn"
-
-[node name="ChangeSceneButton" parent="." instance=ExtResource( 3 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -61.0
-margin_top = 94.0
-margin_right = 61.0
-margin_bottom = 150.0
-text = "Opnieuw"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -77,3 +51,27 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = 94.0
+margin_right = 124.0
+margin_bottom = 172.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_right = 248.0
+margin_bottom = 37.0
+
+[node name="ChangeSceneButton2" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 41.0
+margin_right = 248.0
+margin_bottom = 78.0
+text = "Hoofdmenu"
+next_scene_path = "res://src/Screens/Main Screen.tscn"
