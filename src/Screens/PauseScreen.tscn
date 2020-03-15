@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/title.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/ChangeSceneButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/RetryButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/ContinueButton.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 1 )
+
+[node name="PauseScreen" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+color = Color( 1, 1, 1, 0.243137 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -207.5
+margin_top = -35.0
+margin_right = 207.5
+margin_bottom = 121.0
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Het spel is gepauzeerd"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -268.0
+margin_right = 192.0
+margin_bottom = -52.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = 44.0
+margin_right = 124.0
+margin_bottom = 122.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_right = 248.0
+margin_bottom = 37.0
+
+[node name="RetryButton" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 41.0
+margin_right = 248.0
+margin_bottom = 78.0
+
+[node name="ChangeSceneButton2" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 82.0
+margin_right = 248.0
+margin_bottom = 119.0
+text = "Hoofdmenu"
+next_scene_path = "res://src/Screens/Main Screen.tscn"

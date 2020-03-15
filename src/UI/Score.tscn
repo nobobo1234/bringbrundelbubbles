@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/UI/Score.gd" type="Script" id=1]
 [ext_resource path="res://src/Screens/DiedScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Screens/PauseScreen.tscn" type="PackedScene" id=3]
 
 [node name="Score" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -32,6 +34,9 @@ text = "Level: %s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PauseScreen" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="DiedScreen" parent="." instance=ExtResource( 2 )]
 visible = false
