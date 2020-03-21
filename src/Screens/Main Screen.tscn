@@ -37,6 +37,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -0.968129
+margin_bottom = -0.96814
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,7 +56,7 @@ margin_left = -120.0
 margin_top = -9.56122
 margin_right = 120.0
 margin_bottom = 46.4388
-text = "Start Game"
+text = "Start spel"
 next_scene_path = "res://src/Levels/Level1.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
