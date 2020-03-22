@@ -1,4 +1,5 @@
 extends StaticBody2D
+# Script that opens the door
 
 onready var total_bottles: = get_tree().get_nodes_in_group("flessen").size()
 

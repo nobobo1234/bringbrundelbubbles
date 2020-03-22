@@ -1,10 +1,14 @@
 extends ColorRect
-
-onready var dialog_box: = $CanvasLayer/DialogBox
-var file: = File.new()
-export var level_one: PackedScene
+# Script that loads the conversation for the welcome screen and sends you to
+# level one if the conversation is done
 
 signal dialog_setup
+
+export var level_one: PackedScene
+
+var file: = File.new()
+
+onready var dialog_box: = $CanvasLayer/DialogBox
 
 func _ready() -> void:
 	dialog_box.connect("dialog_ended", self, "go_to_level_one")

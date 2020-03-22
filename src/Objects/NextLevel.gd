@@ -1,5 +1,6 @@
 tool
 extends Area2D
+# Portal that sends you to the next level
 
 export var next_scene: PackedScene
 

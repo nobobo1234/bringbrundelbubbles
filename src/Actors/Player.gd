@@ -1,9 +1,12 @@
 extends Actor
+# Script that controlsa the player
+
+const MENTOS = preload("res://src/Objects/Mentos.tscn")
+const IS_PLAYER = true # For preventing mentos of breaking inside player
+
+var flip = 1.0 
 
 onready var animated_sprite: = $AnimatedSprite
-const MENTOS = preload("res://src/Objects/Mentos.tscn")
-var flip = 1.0 
-const IS_PLAYER = true # For preventing mentos of breaking inside player
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("up") and _velocity.y < 0.0

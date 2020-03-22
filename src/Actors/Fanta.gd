@@ -1,4 +1,5 @@
 extends Actor
+# Script that controls the enemy, the Fanta
 
 var dying = false
 

@@ -2,12 +2,13 @@
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Objects/Spa Rood.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Objects/Spa Paars.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/Score.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/NextLevel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=8]
+
 
 [node name="Level 1" type="Node2D"]
 

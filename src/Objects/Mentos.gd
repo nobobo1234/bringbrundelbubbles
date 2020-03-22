@@ -1,9 +1,12 @@
 extends Area2D
+# Script that makes the mentos bullet work
+
+export var speed: = 350
+
+var direction: = Vector2(1, 0)
+var velocity: = Vector2(0, 0)
 
 onready var animated_sprite: = $AnimatedSprite
-var direction: = Vector2(1, 0)
-export var speed: = 350
-var velocity: = Vector2(0, 0)
 
 func _ready() -> void:
 	pass

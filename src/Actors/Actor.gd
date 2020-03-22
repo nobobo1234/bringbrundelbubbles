@@ -1,5 +1,6 @@
-extends KinematicBody2D
 class_name Actor
+extends KinematicBody2D
+# The class for all the actors in the game that move and feel gravity
 
 const FLOOR_NORMAL: = Vector2.UP
 

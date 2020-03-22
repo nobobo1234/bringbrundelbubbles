@@ -1,9 +1,11 @@
 extends Node2D
-
-onready var dialog_box: = $CanvasLayer/DialogBox
-var file: = File.new()
+# Script that loads the conversation Brundel has with the player in the last level
 
 signal dialog_setup
+
+var file: = File.new()
+
+onready var dialog_box: = $CanvasLayer/DialogBox
 
 func _ready() -> void:
 	file.open("res://src/Conversations/last.json", File.READ)

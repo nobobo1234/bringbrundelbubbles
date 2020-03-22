@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/title.png" type="Texture" id=2]
 [ext_resource path="res://src/UI/ChangeSceneButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/RetryButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/QuitButton.tscn" type="PackedScene" id=5]
 
-[sub_resource type="Theme" id=3]
+[sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
 
 [sub_resource type="Theme" id=2]
@@ -14,7 +15,7 @@ default_font = ExtResource( 1 )
 [node name="DiedScreen" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 3 )
+theme = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,3 +76,8 @@ margin_right = 248.0
 margin_bottom = 78.0
 text = "Hoofdmenu"
 next_scene_path = "res://src/Screens/Main Screen.tscn"
+
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 82.0
+margin_right = 248.0
+margin_bottom = 119.0

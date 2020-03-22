@@ -1,4 +1,5 @@
 extends Node
+# The autoload class that keeps track of all the scores
 
 signal bottles_updated
 signal total_bottles_updated
