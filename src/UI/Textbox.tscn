@@ -2,18 +2,25 @@
 
 [ext_resource path="res://src/UI/Textbox.gd" type="Script" id=1]
 
-[node name="DialogBox" type="Polygon2D"]
-position = Vector2( 0, 16 )
-scale = Vector2( 1.01695, 1 )
+[node name="DialogBox" type="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = -120.0
+margin_right = -32.0
+margin_bottom = -27.0
 color = Color( 0.207843, 0.188235, 0.188235, 1 )
-polygon = PoolVector2Array( 976, 576, 976, 480, 32, 480, 32, 576 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Text" type="RichTextLabel" parent="."]
-margin_left = 62.9333
-margin_top = 496.0
-margin_right = 864.933
-margin_bottom = 560.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 869.0
+margin_bottom = 84.0
 bbcode_enabled = true
 bbcode_text = "Hello, welcome to my dialog box"
 text = "Hello, welcome to my dialog box"
@@ -22,10 +29,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="TextureRect" parent="."]
-margin_left = 897.0
-margin_top = 496.0
-margin_right = 952.0
-margin_bottom = 560.0
+margin_left = 876.0
+margin_top = 16.0
+margin_right = 939.0
+margin_bottom = 80.0
 expand = true
 flip_h = true
 __meta__ = {

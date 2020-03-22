@@ -1,26 +1,15 @@
-extends Polygon2D
+extends ColorRect
 
 onready var text: = $Text
 onready var sprite: = $Sprite
 onready var timer: = $Timer
+var dialog: = []
+var page: = 0
 
-var dialog = [
-	{
-		"sprite": "res://assets/player.png",
-		"text": "Hallo meneer Brundel! Ik heb een verassing voor u."
-	},
-	{
-		"sprite": "res://assets/brundel.png",
-		"text": "En wat mag die verassing dan wel zijn?"
-	}
-]
-var page = 0
+signal dialog_ended
 
 func _ready() -> void:
-	text.set_bbcode(dialog[page].text)
-	text.set_visible_characters(0)
-	sprite.texture = load(dialog[page].sprite)
-	set_process_input(true)
+	get_parent().get_parent().connect("dialog_setup", self, "set_dialog")
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton && event.is_pressed():
@@ -30,6 +19,8 @@ func _input(event: InputEvent) -> void:
 				sprite.texture = load(dialog[page].sprite)
 				text.set_bbcode(dialog[page].text)
 				text.set_visible_characters(0)
+			else:
+				emit_signal("dialog_ended")
 		else:
 			text.set_visible_characters(text.get_total_character_count())
 
@@ -39,3 +30,9 @@ func _on_Timer_timeout() -> void:
 func _on_Brundel_body_entered(body: Node) -> void:
 	visible = true
 	timer.start()
+	
+func set_dialog() -> void:
+	text.set_bbcode(dialog[page].text)
+	text.set_visible_characters(0)
+	sprite.texture = load(dialog[page].sprite)
+	set_process_input(true)

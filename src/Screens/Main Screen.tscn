@@ -57,7 +57,7 @@ margin_top = -9.56122
 margin_right = 120.0
 margin_bottom = 46.4388
 text = "Start spel"
-next_scene_path = "res://src/Levels/Level1.tscn"
+next_scene_path = "res://src/Screens/Welcome.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = ExtResource( 2 )
