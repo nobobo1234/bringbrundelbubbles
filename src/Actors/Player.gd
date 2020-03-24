@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	var direction: = get_direction()
 	change_sprites(direction)
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") && get_tree().get_nodes_in_group("mentos").size() < 1:
 		shoot_fireball(direction)
 	
 	# change_sprites(direction)

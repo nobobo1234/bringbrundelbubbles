@@ -5,6 +5,7 @@ export var speed: = 350
 
 var direction: = Vector2(1, 0)
 var velocity: = Vector2(0, 0)
+var broken: = false
 
 onready var animated_sprite: = $AnimatedSprite
 
@@ -18,6 +19,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.get("IS_PLAYER"):
 		return
+	broken = true
 	direction = Vector2(0, 0)
 	animated_sprite.play("break")
 	yield(animated_sprite, "animation_finished")

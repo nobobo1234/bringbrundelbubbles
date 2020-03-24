@@ -41,8 +41,7 @@ func update_interface() -> void:
 func _on_PlayerData_player_died() -> void:
 	self.died = true
 
-func _on_Score_tree_entered() -> void:
+func _on_Score_ready() -> void:
 	total_bottles = get_tree().get_nodes_in_group("flessen").size()
-	ScoreData.total_bottles = get_tree().get_nodes_in_group("flessen").size()
+	ScoreData.total_bottles = total_bottles
 	ScoreData.bottles = 0
-	ScoreData.levels += 1

@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/title.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/ChangeSceneButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Screens/EndScreen.gd" type="Script" id=4]
+[ext_resource path="res://src/UI/QuitButton.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 1 )
+
+[node name="PauseScreen" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+theme = SubResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -418.5
+margin_top = -40.0
+margin_right = 418.5
+margin_bottom = 116.0
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Gefeliciteerd, je hebt alle %s
+spa paars flessen teruggebracht 
+naar meneer Brundel in %s poging(en)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -268.0
+margin_right = 192.0
+margin_bottom = -52.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = 79.0
+margin_right = 124.0
+margin_bottom = 157.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeSceneButton2" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 248.0
+margin_bottom = 37.0
+text = "Hoofdmenu"
+next_scene_path = "res://src/Screens/Main Screen.tscn"
+
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 6 )]
+margin_top = 41.0
+margin_right = 248.0
+margin_bottom = 78.0

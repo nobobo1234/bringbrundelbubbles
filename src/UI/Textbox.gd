@@ -13,7 +13,7 @@ func _ready() -> void:
 	get_parent().get_parent().connect("dialog_setup", self, "set_dialog")
 	
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton && event.is_pressed():
+	if event is InputEventKey && event.scancode == KEY_SPACE && event.is_pressed():
 		if text.get_visible_characters() > text.get_total_character_count():
 			if page < dialog.size() - 1:
 				page += 1
