@@ -13,23 +13,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ScoreBackground" type="ColorRect" parent="."]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 144.0
+margin_bottom = 88.0
+color = Color( 0, 0, 0, 0.223529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Score" type="Label" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -152.0
-margin_top = 56.0
-margin_right = -56.0
-margin_bottom = 70.0
+margin_left = 40.0
+margin_top = 64.0
+margin_right = 136.0
+margin_bottom = 78.0
 text = "Flesjes: %s/%s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Level" type="Label" parent="."]
-margin_left = 56.0
-margin_top = 56.0
-margin_right = 152.0
-margin_bottom = 70.0
+margin_left = 40.0
+margin_top = 32.0
+margin_right = 136.0
+margin_bottom = 46.0
 text = "Level: %s"
 __meta__ = {
 "_edit_use_anchors_": false

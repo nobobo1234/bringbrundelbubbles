@@ -19,7 +19,6 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.get("IS_PLAYER"):
 		return
-	broken = true
 	direction = Vector2(0, 0)
 	animated_sprite.play("break")
 	yield(animated_sprite, "animation_finished")

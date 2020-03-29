@@ -6,9 +6,8 @@
 [ext_resource path="res://src/UI/Score.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Fanta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Levels/LastLevel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Levels/Level3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Objects/NextLevel.tscn" type="PackedScene" id=8]
-
 
 [node name="Level 2" type="Node2D"]
 
@@ -101,7 +100,7 @@ position = Vector2( 922, 290 )
 position = Vector2( 938, 340 )
 
 [node name="NextLevel" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1121, 515 )
+position = Vector2( 1121, 514 )
 scale = Vector2( 2, 3 )
 next_scene = ExtResource( 7 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/fanta.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Fanta.gd" type="Script" id=2]
@@ -32,6 +32,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.53813, 15.4771 )
+
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 5.17869, 15.4928 )
 
 [node name="Fanta" type="KinematicBody2D" groups=[
@@ -51,11 +54,9 @@ animation = "idling"
 frame = 4
 playing = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-position = Vector2( -0.5, -15.5 )
-scale = Vector2( 0.55, 1.55 )
-polygon = PoolVector2Array( 2.72727, -10, 2.72727, -9.35484, 2.72727, -8.70968, 4.54545, -8.70968, 4.54545, -8.06452, 6.36364, -8.06452, 6.36364, -7.41935, 8.18182, -7.41935, 8.18182, -6.77419, 10, -6.77419, 10, 3.54839, 8.18182, 3.54839, 8.18182, 4.83871, 6.36364, 4.83871, 6.36364, 6.77419, 8.18182, 6.77419, 8.18182, 8.06452, 10, 8.06452, 10, 9.35484, 8.18182, 9.35484, 8.18182, 10, -8.18182, 10, -8.18182, 9.35484, -10, 9.35484, -10, 8.06452, -8.18182, 8.06452, -8.18182, 6.77419, -6.36364, 6.77419, -6.36364, 4.83871, -8.18182, 4.83871, -8.18182, 3.54839, -10, 3.54839, -10, -6.77419, -8.18182, -6.77419, -8.18182, -7.41935, -6.36364, -7.41935, -6.36364, -8.06452, -4.54545, -8.06452, -4.54545, -8.70968, -2.72727, -8.70968, -2.72727, -10 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.467785, -15.5359 )
+shape = SubResource( 7 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -0.5, -15.5 )
@@ -69,5 +70,5 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet detector"]
 modulate = Color( 0.980392, 0.00784314, 0.00784314, 1 )
 position = Vector2( -0.512024, -15.5653 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 [connection signal="area_entered" from="Bullet detector" to="." method="_on_Bullet_detector_area_entered"]
