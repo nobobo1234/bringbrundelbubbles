@@ -100,6 +100,10 @@ pause={
 2d_physics/layer_3="spa"
 2d_physics/layer_4="world"
 
+[locale]
+
+translations=PoolStringArray( "res://src/locales/nl.po" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

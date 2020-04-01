@@ -1,18 +1,18 @@
 [
     {
         "sprite": "res://assets/player.png",
-        "text": "Hallo meneer Brundel! Ik heb uw missie volbracht!"
+        "text": "Hello mister Brundel! I fulfilled your mission!"
     },
     {
         "sprite": "res://assets/brundel.png",
-        "text": "Is het je gelukt om al mijn verloren spa flessen weer terug te brengen?"
+        "text": "Have you found all my lost Spa bottles?"
     },
     {
         "sprite": "res://assets/player.png",
-        "text": "Ja meneer Brundel, al uw spa paars flessen zijn weer terug!"
+        "text": "Yes mister Brundel, all your Spa purple bottles are back!"
     },
     {
         "sprite": "res://assets/brundel.png",
-        "text": "Geweldig! Ik wist wel dat je dingen kon. Hierbij mijn eeuwige dank voor het terugbrengen van al mijn flessen."
+        "text": "Amazing! I kne wyou could do things. You will have my eternal gratitude for bringing back all my bottles."
     }
 ]

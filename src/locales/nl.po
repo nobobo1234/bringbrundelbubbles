@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Start game"
+msgstr "Start spel"
+
+msgid "Quit"
+msgstr "Afsluiten"
+
+msgid "Hello children, I am mister Brundel."
+msgstr "Hallo kindertjes, ik ben meneer Brundel."
+
+msgid ""
+"Something bad happened yesterday. Somebody hid all my Spa purple bottles "
+"through the school."
+msgstr "Er is gisteren iets vreselijks gebeurd. Iemand heeft al mijn spa paars flessen door de hele school verspreid."
+
+msgid ""
+"Because I know you can do things, I select you to find back all my bottles, "
+"I have faith in you!"
+msgstr "Omdat ik weet dat jij dingen kan, wijs ik je aan om al mijn flessen weer terug te vinden, ik vetrouw op je!"
+
+msgid ""
+"But watch out! The school isn't without obstacles. On your way you will find "
+"supersweet Fanta bottles that want to poison you with sugar. Be sure to kill "
+"them off with mentos by pressing the space bar."
+msgstr "Maar pas op! De school is niet zonder obstakels. Onderweg zul je mierzoete Fanta-flessen tegenkomen die je willen vergiftigen met suiker. Zorg dat je ze kapot maakt door mentos naar ze te schieten met de spatiebalk."
+
+msgid "I wish you luck and will wait for you at the end."
+msgstr "Ik wens je veel succes en zal op je wachten aan het einde."
+
+msgid "Bottles: %s/%s"
+msgstr "Flesjes: %s/%s"
+
+msgid "You died because of an overdose of sugar"
+msgstr "Je bent doodgegaan aan een overdosis suiker"
+
+msgid "Try again"
+msgstr "Opnieuw"
+
+msgid "Main menu"
+msgstr "Hoofdmenu"
+
+msgid "Hello mister Brundel! I fulfilled your mission!"
+msgstr "Hallo meneer Brundel! Ik heb uw missie volbracht!"
+
+msgid "Have you found all my lost Spa bottles?"
+msgstr "Is het je gelukt om al mijn verloren spa flessen weer terug te brengen?"
+
+msgid "Yes mister Brundel, all your Spa purple bottles are back!"
+msgstr "Ja meneer Brundel, al uw spa paars flessen zijn terug!"
+
+msgid ""
+"Amazing! I knew you could do things. You will have my eternal gratitude for "
+"bringing back all my bottles."
+msgstr "Geweldig! Ik wist dat je dingen kon. Hierbij mijn eeuwige dank voor het terugbrengen van al mijn flessen."
+
+msgid ""
+"Congratulations, you brought back all %s Spa purple bottles to mister "
+"Brundel in %s tries"
+msgstr "Gefeliciteerd, je hebt alle %s spa paars flessen teruggebracht naar meneer Brundel in %s poging(en)"
+
+msgid "Language: %s"
+msgstr "Taal: %s"
+
+msgid "Continue"
+msgstr "Doorgaan"
+
+msgid "The game has been paused"
+msgstr "Het spel is gepauzeerd"

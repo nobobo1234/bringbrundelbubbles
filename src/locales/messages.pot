@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+
+msgid "Start game"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Hello children, I am mister Brundel"
+msgstr ""
+
+msgid "Something bad happened today. Somebody spread all my Spa purple bottles through the school"
+msgstr ""
+
+msgid "Because I know you can do things, I select you to find back all my bottles, I have faith in you!"
+msgstr ""
+
+msgid "But watch out! The school isn't without obstacles. On your way you will find supersweet Fanta bottles that want to poison you with sugar. Be sure to kill them off with mentos by pressing the space bar."
+msgstr ""
+
+msgid "I wish you luck and will wait for you at the end."
+msgstr ""
+
+msgid "Bottles"
+msgstr ""
+
+msgid "You died because of an overdose of sugar"
+msgstr ""
+
+msgid "Try again"
+msgstr ""
+
+msgid "Main menu"
+msgstr ""
+
+msgid "Hello mister Brundel! I fulfilled your mission!"
+msgstr ""
+
+msgid "Have you found all my lost Spa bottles?"
+msgstr ""
+
+msgid "Yes mister Brundel, all your Spa purple bottles are back!"
+msgstr ""
+
+msgid "Amazing! I knew you could do things. You will have my eternal gratitude for bringing back all my bottles."
+msgstr ""
+
+msgid "Congratulations, you brought back all %s Spa purple bottles to mister Brundel in %s tries"
+msgstr ""
+
+msgid "Language"
+msgstr ""

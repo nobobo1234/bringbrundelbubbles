@@ -33,8 +33,9 @@ margin_right = 207.5
 margin_bottom = 121.0
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Het spel is gepauzeerd"
+text = "The game has been paused"
 align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,7 +80,7 @@ margin_bottom = 78.0
 margin_top = 82.0
 margin_right = 248.0
 margin_bottom = 119.0
-text = "Hoofdmenu"
+text = "Main menu"
 next_scene_path = "res://src/Screens/Main Screen.tscn"
 
 [node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 6 )]

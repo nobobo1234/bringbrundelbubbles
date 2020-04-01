@@ -28,16 +28,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -418.5
+margin_left = -238.0
 margin_top = -40.0
-margin_right = 418.5
+margin_right = 238.0
 margin_bottom = 116.0
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Gefeliciteerd, je hebt alle %s
-spa paars flessen teruggebracht 
-naar meneer Brundel in %s poging(en)"
+text = "Congratulations, you brought back all %s Spa purple bottles to mister Brundel in %s tries"
 align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,7 +71,7 @@ __meta__ = {
 [node name="ChangeSceneButton2" parent="VBoxContainer" instance=ExtResource( 3 )]
 margin_right = 248.0
 margin_bottom = 37.0
-text = "Hoofdmenu"
+text = "Main menu"
 next_scene_path = "res://src/Screens/Main Screen.tscn"
 
 [node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 6 )]

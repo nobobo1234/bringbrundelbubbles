@@ -18,7 +18,7 @@ func _input(event: InputEvent) -> void:
 			if page < dialog.size() - 1:
 				page += 1
 				sprite.texture = load(dialog[page].sprite)
-				text.set_bbcode(dialog[page].text)
+				text.set_bbcode(tr(dialog[page].text))
 				text.set_visible_characters(0)
 			else:
 				emit_signal("dialog_ended")
@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 			text.set_visible_characters(text.get_total_character_count())
 	
 func set_dialog() -> void:
-	text.set_bbcode(dialog[page].text)
+	text.set_bbcode(tr(dialog[page].text))
 	text.set_visible_characters(0)
 	sprite.texture = load(dialog[page].sprite)
 	set_process_input(true)

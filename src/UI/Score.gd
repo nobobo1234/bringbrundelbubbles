@@ -3,6 +3,7 @@ extends Control
 
 onready var score:= $Score
 onready var leveltext: = $Level
+onready var scorebackground: = $ScoreBackground
 onready var total_bottles: = get_tree().get_nodes_in_group("flessen").size()
 onready var pause_title: Label = get_node("DiedScreen/Label")
 onready var scene_tree: = get_tree()
@@ -25,6 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func set_died(value: bool) -> void:
 	score.visible = false
 	leveltext.visible = false
+	scorebackground.visible = false
 	died = value
 	scene_tree.paused = value
 	died_overlay.visible = value
@@ -35,7 +37,7 @@ func set_paused(value: bool) -> void:
 	pause_overlay.visible = value
 
 func update_interface() -> void:
-	score.text = "Flesjes: %s/%s" % [ScoreData.bottles, total_bottles]
+	score.text = tr("Bottles: %s/%s") % [ScoreData.bottles, total_bottles]
 	leveltext.text = "Level: %s" % ScoreData.levels
 
 func _on_PlayerData_player_died() -> void:

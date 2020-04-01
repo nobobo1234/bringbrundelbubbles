@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/title.png" type="Texture" id=1]
 [ext_resource path="res://assets/jitterfreepixelart.tres" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/UI/QuitButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/background.png" type="Texture" id=6]
+[ext_resource path="res://src/UI/ChangeLocaleButton.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 4 )
@@ -51,6 +52,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
 color = Color( 1, 1, 1, 0.32549 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,7 +79,7 @@ __meta__ = {
 [node name="PlayButton" parent="VBoxContainer" instance=ExtResource( 3 )]
 margin_right = 223.0
 margin_bottom = 37.0
-text = "Start spel"
+text = "Start game"
 next_scene_path = "res://src/Screens/Welcome.tscn"
 
 [node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 5 )]
@@ -99,3 +102,11 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ChangeLanguageButton" parent="." instance=ExtResource( 8 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.4582
+margin_top = -63.6564
+margin_right = 137.458
+margin_bottom = -34.6564

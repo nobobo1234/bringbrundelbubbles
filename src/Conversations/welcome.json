@@ -1,22 +1,22 @@
 [
     {
         "sprite": "res://assets/brundel-front.png",
-        "text": "Hallo kindertjes, ik ben meneer Brundel."
+        "text": "Hello children, I am mister Brundel."
     },
     {
         "sprite": "res://assets/brundel-front.png",
-        "text": "Er is gisteren iets vreselijks gebeurd. Iemand heeft al mijn spa paars flessen door de hele school verspreid."
+        "text": "Something bad happened yesterday. Somebody hid all my Spa purple bottles through the school."
     },
     {
         "sprite": "res://assets/brundel-front.png",
-        "text": "Omdat ik weet dat jij dingen kan, wijs ik je aan om al mijn flessen weer terug te vinden, ik vertrouw op je!"
+        "text": "Because I know you can do things, I select you to find back all my bottles, I have faith in you!"
     },
     {
         "sprite": "res://assets/brundel-front.png",
-        "text": "Maar pas op! De school is niet zonder obstakels. Onderweg zul je mierzoete Fanta-flessen tegenkomen die je willen vergiftigen met suiker. Zorg dat je ze kapot maakt door mentos naar ze te schieten met de spatiebalk."
+        "text": "But watch out! The school isn't without obstacles. On your way you will find supersweet Fanta bottles that want to poison you with sugar. Be sure to kill them off with mentos by pressing the space bar."
     },
     {
         "sprite": "res://assets/brundel-front.png",
-        "text": "Ik wens je veel succes en zal op je wachten aan het einde."
+        "text": "I wish you luck and will wait for you at the end."
     }
 ]
