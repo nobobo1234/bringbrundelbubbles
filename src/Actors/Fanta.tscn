@@ -51,7 +51,7 @@ gravity = 5000.0
 position = Vector2( 0, -16 )
 frames = SubResource( 6 )
 animation = "idling"
-frame = 4
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -59,8 +59,8 @@ position = Vector2( -0.467785, -15.5359 )
 shape = SubResource( 7 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( -0.5, -15.5 )
-scale = Vector2( 0.55, 1.55 )
+position = Vector2( -0.364723, -15.5 )
+scale = Vector2( 0.563528, 1.55 )
 process_parent = true
 physics_process_parent = true
 

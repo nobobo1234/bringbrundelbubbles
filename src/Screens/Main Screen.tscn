@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/title.png" type="Texture" id=1]
 [ext_resource path="res://assets/jitterfreepixelart.tres" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Monsterrat_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/UI/QuitButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/background.png" type="Texture" id=6]
+[ext_resource path="res://src/Screens/Main Screen.gd" type="Script" id=7]
 [ext_resource path="res://src/UI/ChangeLocaleButton.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Theme" id=1]
@@ -33,6 +34,7 @@ margin_left = -1.0
 margin_right = -1.0
 rect_scale = Vector2( 1.03292, 1.03292 )
 theme = SubResource( 1 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

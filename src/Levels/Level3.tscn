@@ -62,10 +62,10 @@ position = Vector2( 806, 128 )
 position = Vector2( 1074, 222 )
 
 [node name="Fanta7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1258, 400 )
+position = Vector2( 1258, 399 )
 
 [node name="Fanta8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1286, 400 )
+position = Vector2( 1419, 400 )
 
 [node name="Fanta9" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1197, 574 )

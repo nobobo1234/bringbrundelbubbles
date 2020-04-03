@@ -11,7 +11,7 @@ font_data = SubResource( 1 )
 [sub_resource type="Theme" id=3]
 default_font = SubResource( 2 )
 
-[node name="ChangeLanguageButton" type="ToolButton"]
+[node name="ChangeLanguageButton" type="Button"]
 margin_right = 121.0
 margin_bottom = 29.0
 theme = SubResource( 3 )
