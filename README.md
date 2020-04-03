@@ -1,5 +1,5 @@
 # BBB: Bring Brundel Bubbles
-A game inspired by my professor Brundel. Played using the arrow or wasd keys and using internationalization.
+A game inspired by my professor Brundel. Played using the arrow or wasd keys and using internationalization. The offline game can be found at the [releases page](https://github.com/nobobo1234/bringbrundelbubbles/releases/tag/v1.0) or for the online version go to [my site](https://noahvb.nl/bbb)
 
 ## Screenshots
 ![](screenshots/main.png)
